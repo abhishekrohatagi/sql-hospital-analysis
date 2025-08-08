@@ -1,3 +1,24 @@
+-- View all records from the table
+SELECT * 
+FROM patients_record;
+
+-- View table structure
+SELECT 
+    column_name,
+    data_type,
+    character_maximum_length,
+    is_nullable
+FROM information_schema.columns
+WHERE table_name = 'patients_record';
+
+-- Change column types to DATE
+ALTER TABLE patients_record
+ALTER COLUMN Date_of_Admission DATE;
+
+ALTER TABLE patients_record
+ALTER COLUMN Discharge_Date DATE;
+
+
 ------------------------------------------------------
 -- 1. Which medical condition has the highest average billing amount
 ------------------------------------------------------
